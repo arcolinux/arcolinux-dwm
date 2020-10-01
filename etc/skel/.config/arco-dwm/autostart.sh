@@ -6,7 +6,7 @@ function run {
     $@&
   fi
 }
-run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
+#run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run "xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal"
 #run "xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off"
 #xrandr --output eDP-1 --primary --mode 1368x768 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off
@@ -19,7 +19,8 @@ run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/picom.conf &
 run "numlockx on"
 run "volumeicon"
- ~/.config/dwmbar/dwmbar.sh &   # script for updating the status bar
+run slstatus &
+ #~/.config/dwmbar/dwmbar.sh &   # script for updating the status bar
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 dunst &    # similar as xfce4-notifyd
 #run "nitrogen --restore"
@@ -32,7 +33,7 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run "insync start"
 #run "spotify"
 #run "ckb-next -b"
-run "discord"
+#run "discord"
 #run "telegram-desktop"
 
 
