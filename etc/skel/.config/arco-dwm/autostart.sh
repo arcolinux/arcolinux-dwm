@@ -15,6 +15,7 @@ run "pamac-tray"
 run "variety"
 run "xfce4-power-manager"
 run "blueberry-tray"
+run "xfce-notify"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/picom.conf &
 run "numlockx on"
@@ -22,7 +23,6 @@ run "volumeicon"
 run slstatus &
  #~/.config/dwmbar/dwmbar.sh &   # script for updating the status bar
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
-dunst &    # similar as xfce4-notifyd
 #run "nitrogen --restore"
 #run "conky -c $HOME/.config/awesome/system-overview"
 #you can set wallpapers in themes as well
