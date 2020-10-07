@@ -84,7 +84,7 @@ conky.config = {
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
-	own_window_type = 'override',				    -- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
 	--Colours
@@ -144,7 +144,6 @@ ${color1}[Ctrl]+[Alt]+U${alignr}${color2}Volume Control${color}
 ${color1}[PrtSc]${alignr}${color2}Screenshot${color}
 ${color1}[S]+[Shift]+R${alignr}${color2}Restart${color}
 ${color1}${hr}${color}
-${color1}[S]+[Shift]+X${alignr}${color2}Stop${color}
 ${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
 ${color1}[S]+x${alignr}${color2}Exit${color}
 ${color1}${hr}${color}
