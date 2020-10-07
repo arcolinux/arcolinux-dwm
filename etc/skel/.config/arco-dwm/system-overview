@@ -134,7 +134,6 @@ ${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
 ${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
 ${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
 ${color1}${hr}${color}
-${color1}[S]+Enter${alignr}${color2}Terminal${color}
 ${color1}[S]+[Shift]+Enter${alignr}${color2}File Manager${color}
 ${color1}[Ctrl]+[Alt]+V${alignr}${color2}Vivaldi${color}
 ${color1}[S]+F2${alignr}${color2}Editor${color}
