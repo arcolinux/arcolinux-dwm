@@ -71,8 +71,8 @@ super + c
     conky-toggle
 
 #Htop
-super + h
-    urxvt 'htop task manager' -e htop
+#super + h
+#    urxvt 'htop task manager' -e htop
 
 #arcolinux-logout
 super + x
@@ -83,20 +83,20 @@ super + r
     rofi-theme-selector
 
 #Urxvt
-super + t
-    urxvt
+#super + t
+#    urxvt
 
 #Pavucontrol
 super + v
     pavucontrol
 
 #Pragha
-super + m
-    pragha
+#super + m
+#    pragha
 
 #Termite
-super + Return
-    termite
+#super + Return
+#    termite
 
 #Xkill
 super + Escape
@@ -117,8 +117,8 @@ super + shift + Return
 
 #Keyboard dependent
 #File-Manager
-#super + shift + KP_Enter
-#	thunar
+super + shift + KP_Enter
+	thunar
 
 #dmenu
 super + shift + d
