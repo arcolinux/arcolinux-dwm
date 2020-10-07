@@ -128,10 +128,6 @@ super + shift + d
 super + shift + s
 	pkill -USR1 -x sxhkd
 
-#Keyboard dependent
-#super + shift + KP_Enter
-#	thunar
-
 
 #################################################################
 # CONTROL + ALT KEYS
@@ -164,10 +160,6 @@ ctrl + alt + c
 #Chromium
 ctrl + alt + g
     chromium -no-default-browser-check
-
-#Evolution
-ctrl + alt + e
-     evolution
 
 #Firefox
 ctrl + alt + f
