@@ -36,10 +36,11 @@ static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
+	 *  use tags mask to point an application to a specific workspace 
 	 */
 	/* class                       instance    title      tags mask      isfloating   monitor */
-	{ "Gimp",                      NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",                   NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Gimp",                      NULL,       NULL,       0,            0,           -1 },
+	{ "firefox",                   NULL,       NULL,       0,            0,           -1 },
 	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       0,            1,           -1 },
 };
 
