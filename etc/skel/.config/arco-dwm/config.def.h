@@ -30,17 +30,19 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
+	 *  use tags mask to point an application to a specific workspace
 	 */
 	/* class                       instance    title      tags mask      isfloating   monitor */
-	{ "Gimp",                      NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",                   NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       1 << 8,       1,           -1 },
+	{ "Gimp",                      NULL,       NULL,       0,            0,           -1 },
+	{ "Xfce4-terminal",            NULL,       NULL,       0,            1,           -1 },
+	{ "firefox",                   NULL,       NULL,       0,            0,           -1 },
+	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -89,8 +91,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY,            						XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
