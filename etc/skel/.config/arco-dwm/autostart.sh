@@ -21,10 +21,9 @@ picom -b  --config ~/.config/arco-dwm/picom.conf &
 run "numlockx on"
 run "volumeicon"
 run slstatus &
- #~/.config/dwmbar/dwmbar.sh &   # script for updating the status bar
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
-#run "conky -c $HOME/.config/awesome/system-overview"
+run "conky -c $HOME/.config/arco-dwm/system-overview"
 #you can set wallpapers in themes as well
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 
@@ -35,10 +34,3 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run "ckb-next -b"
 #run "discord"
 #run "telegram-desktop"
-
-
-
-
- # Work in progress!
-
-# picom --config ~/.config/picom.conf  &		# picom for transparency
