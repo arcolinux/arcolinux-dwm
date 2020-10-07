@@ -72,6 +72,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *filecmd[]  = { "thunar", NULL };
+static const char *calendar[]  = { "gsimplecal", NULL };
+static const char *bashtop[]  = { "urxvt 'bashtop' -e bashtop", NULL };
 
 #include "selfrestart.c"
 
@@ -122,7 +124,9 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+	{ ClkStatusText,        0,              Button1,        spawn,          {.v = bashtop } },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = filecmd } },
+	{ ClkStatusText,        0,              Button3,        spawn,          {.v = calendar } },	
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
