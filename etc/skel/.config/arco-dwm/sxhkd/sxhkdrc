@@ -95,8 +95,8 @@ super + v
 #    pragha
 
 #Termite
-#super + Return
-#    termite
+super + Return
+    termite
 
 #Xkill
 super + Escape
