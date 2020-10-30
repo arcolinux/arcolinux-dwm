@@ -76,6 +76,7 @@ static const char *calendar[]  = { "gsimplecal", NULL };
 static const char *bashtop[]  = { "xfce4-taskmanager", NULL };
 
 #include "selfrestart.c"
+#include "shiftview.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,6 +107,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
+    { MODKEY|ShiftMask,		        XK_space,  shiftview,	   { .i = 1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
