@@ -35,7 +35,7 @@ static const unsigned int alphas[][3]      = {
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
-/* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail", "Video", "Image", "Files", "Music" }; */
+/* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail", "Video", "Image", "Files" }; */
 
 
 static const Rule rules[] = {
