@@ -10,6 +10,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Noto Sans Mono:size=11" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -56,11 +57,14 @@ static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
+#include "layouts.c"
+
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "HHH",      grid },
 	{ "[M]",      monocle },
+	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -103,15 +107,16 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	/*{ MODKEY,                       XK_Return, zoom,           {0} },*/
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,		XK_q,      killclient,     {0} },
-	{ MODKEY,			XK_q,      killclient,     {0} },
+	/*{ MODKEY,                       XK_Tab,    view,           {0} },*/
+	{ MODKEY|ShiftMask,				XK_q,      killclient,     {0} },
+	{ MODKEY,						XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ControlMask,			XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
@@ -120,7 +125,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
-	{ MODKEY|ShiftMask,		XK_space,  shiftview,	   { .i = 1 } },
+	{ Mod1Mask|ControlMask,         XK_Right,  shiftview,      {.i =  1 } },
+	{ Mod1Mask|ControlMask,         XK_Left,   shiftview,      {.i = -1 } },
+	{ Mod1Mask|ControlMask,         XK_Up,     shiftview,      {.i =  1 } },
+	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },	
+	{ Mod1Mask,						XK_Tab,    shiftview,      {.i =  1 } },
+	{ Mod1Mask|ShiftMask,	        XK_Tab,	   shiftview,	   {.i = -1 } },
+	{ MODKEY,		        		XK_Tab,    shiftview,	   {.i =  1 } },
+	{ MODKEY|ShiftMask,		        XK_Tab,	   shiftview,	   {.i = -1 } },
+
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
