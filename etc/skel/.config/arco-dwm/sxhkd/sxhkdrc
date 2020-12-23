@@ -199,7 +199,7 @@ ctrl + alt + s
 
 #Termite
 ctrl + alt + Return
-    termite
+    st
 
 #termite
 ctrl + alt + t
