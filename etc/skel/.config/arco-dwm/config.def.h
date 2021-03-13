@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ "Xfce4-terminal",            NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",                   NULL,       NULL,       0,            0,           -1 },
 	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       0,            1,           -1 },
+	{ "Arcolinux-calamares-tool.py",  NULL,       NULL,       0,            1,           -1 },	
 };
 
 /* layout(s) */
