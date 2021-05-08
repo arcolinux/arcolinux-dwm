@@ -15,6 +15,7 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #run xrandr --output DVI-1 --right-of DVI-0 --auto
 #run xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
 #run xrandr --output HDMI2 --right-of HDMI1 --auto
+#autorandr horizontal
 
 run "nm-applet"
 run "pamac-tray"
