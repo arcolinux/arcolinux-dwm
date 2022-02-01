@@ -94,18 +94,18 @@ super + v
 #super + m
 #    pragha
 
-#urxvt
+#alacritty
 super + Return
-    urxvt
+    alacritty
 
 #Xkill
 super + Escape
     xkill
 
 #Keyboard dependent
-#urxvt
+#alacritty
 super + KP_Enter
-	urxvt
+	alacritty
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -201,9 +201,9 @@ ctrl + alt + s
 ctrl + alt + Return
     st
 
-#urxvt
+#alacritty
 ctrl + alt + t
-    urxvt
+    alacritty
 
 #Vivaldi
 ctrl + alt + v
@@ -215,9 +215,9 @@ ctrl + alt + a
 
 
 #Keyboard dependent
-#urxvt
+#alacritty
 #ctrl + alt + KP_Enter
-#     urxvt
+#     alacritty
 
 
 #################################################################
