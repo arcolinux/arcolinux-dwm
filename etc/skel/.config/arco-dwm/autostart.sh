@@ -33,7 +33,8 @@ sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 run "conky -c $HOME/.config/arco-dwm/system-overview"
 #you can set wallpapers in themes as well
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-
+#wallpaper for other Arch based systems
+#feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 #run applications from startup
 
 #run "insync start"
