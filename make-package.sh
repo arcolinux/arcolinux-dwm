@@ -16,3 +16,4 @@
 
 cd ./etc/skel/.config/arco-dwm/
 make
+make clean
