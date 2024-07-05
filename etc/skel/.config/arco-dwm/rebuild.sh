@@ -8,7 +8,7 @@ make clean
 echo
 tput setaf 2
 echo "################################################################"
-echo "Press super + shift + r to reload your new Chadwm build"
+echo "Press super + shift + r to reload your new Dwm build"
 echo "################################################################"
 tput sgr0
 echo
