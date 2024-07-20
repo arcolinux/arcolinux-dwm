@@ -78,6 +78,14 @@ super + c
 super + x
     archlinux-logout
 
+#nlogout
+alt + shift + x
+    nlogout
+
+#nlogout
+alt + x
+    nlogout
+
 #powermenu
 super + shift + x
     arcolinux-powermenu
