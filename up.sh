@@ -33,6 +33,12 @@
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
 git pull
+
+echo "getting picom.conf"
+installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
+found_file=$(find "$installed_dir" -type f -name "picom.conf" | head -n 1)
+wget -v https://raw.githubusercontent.com/arconetpro/picom/refs/heads/main/picom.conf -O $found_file 
+
 echo "Copy config.h"
 rm etc/skel/.config/arco-dwm/config.h
 ./make-package.sh
